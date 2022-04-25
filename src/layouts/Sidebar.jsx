@@ -53,7 +53,7 @@ export default function Sidebar({ isOpen }) {
                 opacity: 0,
               }
         }
-        className="sticky z-50 top-0 bottom-0 left-0 bg-primary-500 h-[95vh] min-w-[300px] w-[15vw] transition-all duration-500 ease-in-out"
+        className="absolute z-50 flex bg-primary-500 h-[95vh] min-w-[300px] w-[15vw] transition-all duration-500 ease-in-out"
       >
         <ul className="flex flex-col px-6 gap-8 py-6">
           {items.map((item, index) => (
