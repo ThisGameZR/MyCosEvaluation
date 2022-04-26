@@ -1,6 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { AiFillHome, AiFillQuestionCircle, AiOutlineForm } from "react-icons/ai";
+import {
+  AiFillHome,
+  AiFillQuestionCircle,
+  AiOutlineForm,
+} from "react-icons/ai";
 import { VscTypeHierarchySub } from "react-icons/vsc";
 import { IoIosNotifications } from "react-icons/io";
 import { HiDocumentReport } from "react-icons/hi";
@@ -14,7 +18,7 @@ const items = [
   {
     icon: <AiFillQuestionCircle />,
     title: "Manage Question",
-    link: "/",
+    link: "/member/Question",
   },
   {
     icon: <VscTypeHierarchySub />,
