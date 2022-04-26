@@ -9,7 +9,7 @@ const items = [
   {
     icon: <AiFillHome />,
     title: "Dashboard",
-    link: "/",
+    link: "/member",
   },
   {
     icon: <AiFillQuestionCircle />,
