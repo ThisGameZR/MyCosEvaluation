@@ -10,12 +10,12 @@ export default function Login() {
             <div className="w-full text-center text-4xl text-primary-500">LOGIN</div>
             <input
               className="w-full text-xl outline-none border-b border-primary-200 placeholder:text-primary-200 focus:text-2xl transition-all ease-in-out duration-300 p-2"
-              type="text"
+              type="email"
               placeholder="Email"
             />
             <input
               className="w-full text-xl outline-none border-b border-primary-200 placeholder:text-primary-200 focus:text-2xl transition-all ease-in-out duration-300 p-2"
-              type="text"
+              type="password"
               placeholder="Password"
             />
             <Link to="/member" className="bg-primary-500 text-white w-full p-3 hover:bg-primary-200 text-center">

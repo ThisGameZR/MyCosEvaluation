@@ -8,12 +8,13 @@ import {
 import { VscTypeHierarchySub } from "react-icons/vsc";
 import { IoIosNotifications } from "react-icons/io";
 import { HiDocumentReport } from "react-icons/hi";
+import UseClickOutside from "../hooks/useClickOutside";
 
 const items = [
   {
     icon: <AiFillHome />,
     title: "Dashboard",
-    link: "/",
+    link: "/member",
   },
   {
     icon: <AiFillQuestionCircle />,
@@ -42,29 +43,35 @@ const items = [
   },
 ];
 
-export default function Sidebar({ isOpen }) {
+export default function Sidebar({ isOpen, setIsOpen }) {
   return (
     <>
-      <nav
-        style={
-          isOpen
-            ? {
-                transform: "translateX(0)",
-                opacity: "1",
-              }
-            : {
-                transform: "translateX(-100%)",
-                opacity: 0,
-              }
-        }
-        className="absolute z-50 flex bg-primary-500 h-[95vh] min-w-[300px] w-[15vw] transition-all duration-500 ease-in-out"
+      <UseClickOutside
+        onClickOutside={() => {
+          setIsOpen(false);
+        }}
       >
-        <ul className="flex flex-col px-6 gap-8 py-6">
-          {items.map((item, index) => (
-            <Item key={index} {...item} />
-          ))}
-        </ul>
-      </nav>
+        <nav
+          style={
+            isOpen
+              ? {
+                  transform: "translateX(0)",
+                  opacity: "1",
+                }
+              : {
+                  transform: "translateX(-100%)",
+                  opacity: 0,
+                }
+          }
+          className="absolute z-50 flex bg-primary-500 h-[95vh] min-w-[300px] w-[15vw] transition-all duration-500 ease-in-out"
+        >
+          <ul className="flex flex-col px-6 gap-8 py-6">
+            {items.map((item, index) => (
+              <Item key={index} {...item} />
+            ))}
+          </ul>
+        </nav>
+      </UseClickOutside>
     </>
   );
 }
