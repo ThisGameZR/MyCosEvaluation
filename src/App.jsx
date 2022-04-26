@@ -3,6 +3,7 @@ import MainLayout from "./layouts/MainLayout";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
+import Question from "./pages/Question";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route exact path="/member" element={<MainLayout />}>
             <Route index element={<Dashboard />} />
+            <Route path="Question" element={<Question />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>

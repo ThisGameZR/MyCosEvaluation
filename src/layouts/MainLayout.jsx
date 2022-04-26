@@ -9,7 +9,7 @@ export default function MainLayout() {
   return (
     <>
       <Header isOpen={isOpen} setIsOpen={setIsOpen} />
-      <Sidebar isOpen={isOpen} />
+      <Sidebar isOpen={isOpen} setIsOpen={setIsOpen} />
       <Outlet />
     </>
   );
